@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnalyzerTestApp.MainPage"
+             BackgroundColor="Black">
+
+    <!-- Phone Container -->
+    <Border x:Name="PhoneContainer"
+            Stroke="#2196F3"
+            StrokeThickness="2"
+            StrokeShape="Rectangle"
+            BackgroundColor="Black"
+            Padding="10"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+
+        <AbsoluteLayout x:Name="PhoneView"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        WidthRequest="300"
+                        HeightRequest="667">
+            <!-- Approximate 1080x2400 aspect ratio -->
+
+            <!-- Tap Overlay Canvas -->
+            <GraphicsView x:Name="CircleCanvas"
+                          Drawable="{Binding CircleDrawable}"
+                          HorizontalOptions="Fill"
+                          VerticalOptions="Fill"
+                          AbsoluteLayout.LayoutBounds="0,0,1,1"
+                          AbsoluteLayout.LayoutFlags="All" />
+
+        </AbsoluteLayout>
+    </Border>
+</ContentPage>
